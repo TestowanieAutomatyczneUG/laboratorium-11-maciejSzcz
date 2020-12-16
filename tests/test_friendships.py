@@ -37,7 +37,7 @@ class TestFriendships(TestCase):
         self.temp.make_friends("friend1", "friend2")
         self.assertEqual(self.temp.are_friends("friend3", "friend2"), False)
 
-    def test_friendships_are_friends_false(self):
+    def test_friendships_are_friends_raises_exception_with_int(self):
         self.assertRaises(TypeError, self.temp.are_friends, 1, 43)
 
     def tearDown(self):

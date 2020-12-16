@@ -5,7 +5,7 @@ from unittest import mock
 from src.zad2.notes_storage import NotesStorage
 
 
-class TestOpenFile(unittest.TestCase):
+class TestNotesStorage(unittest.TestCase):
     def test_notes_storage_add_not_note(self):
         notes_storage = NotesStorage()
         notes_storage.add = MagicMock(side_effect=TypeError)
